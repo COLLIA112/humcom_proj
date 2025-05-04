@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <script type="text/javascript" src = "sample.js">
+
+    </script>
+    <style>
+    body {background-color:antiquewhite; justify-content: center; align-items: center; display: flex;}
+    #content {text-align: center; border: 2px solid black ; margin: 200px; padding: 10px; width: 40%; background-color: pink} 
+    #result {text-align: center; font-weight: bold; color: blue; font-size: medium; border: 1px solid black; background-color: lightgoldenrodyellow;
+        margin: 10px;   padding: 10px; }
+    button {width: 10%; padding: 10px; border: 1px solid pink; }
+    input {width: 70%; margin: 5px; padding: 5px; border: 1px solid rgb(229, 162, 209); height: 15px;}
+
+    </style>
+</head>
+<body>
+
+    <div id = "content">
+    <h1>Colleen's Simple Calculator </h1>
+    <input type="text" id="num1" placeholder="ENTER THE FIRST NUMBER"><br>
+    <input type="text" id="num2" placeholder="ENTER THE SECOND NUMBER"><br>
+
+    <h2>What operation do you want to use?</h2>
+    <button onclick="calculatesum();">Add</button>
+    <button onclick="calculatediff();">Subtract</button>
+    <button onclick="calculateproduct();">Multiply</button>
+    <button onclick="calculatequotient();">Divide</button>
+   <br><br>   
+    <div id="result">results will show here:</div>
+ </div>
+</body>
+</html>

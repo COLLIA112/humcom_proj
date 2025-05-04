@@ -1,0 +1,65 @@
+  body {font-family: verdana, sans-serif;  margin-top: 50px; margin-left: 200px; margin-right: 200px; background-color: rgb(188, 172, 245);text-align: center;}
+   h2, h4 {font-family: georgia, serif; text-align: left;}
+   h1 {font-family: georgia, serif; text-align: center;}
+   pre {font-family: verdana, sans-serif}
+
+   .content {display: flex;}
+    .col {flex: 1; width: 30%; 
+      margin: 10px; 
+       padding: 10px;}
+       #dp {float: left; border: 1 solid black;}
+       .info {text-align: left;}
+       #about {text-align: center;}
+       #projects {text-align: center;}
+        
+       .content {display: flex;}
+        .col {flex: 1; width: 30%; 
+          margin: 5px; 
+           padding: 5px;}
+           #dp {float: left; border: 1 solid black;}
+           .info {text-align: left;}
+       
+           .header { background-color: #c6afe4;
+            color: rgb(27, 22, 22);
+            padding: 1rem 2rem;
+            text-align: center;}
+
+            .column {
+                float: left;
+                width: 50%;
+              }
+
+              .row:after {
+                content: "";
+                display: table;
+                clear: both;
+              }
+              
+              .column1 {
+                float: left;
+                width: 20%;
+              }
+
+              .column2 {
+                float: left;
+                width: 70%;
+              }
+              
+          
+              #pic {border: 5px solid black; float: left;}
+             .pro1, .pro2, .pro3 {flex: 1;}
+             .pro2 {text-align: center;  justify-content: center;}
+             .pro1, .pro3 { flex-direction: column;  margin-top: 15;}
+
+             img:hover {
+              transform: scale(1.1);
+              transition: transform 0.3s ease-in-out;
+          }
+
+a:link {text-decoration: underline; color: rgb(182, 29, 156);}
+
+a:visited { color: rgb(218, 235, 241);}
+
+a:active { color: rgb(52, 127, 189);}
+
+a:hover { color: rgb(247, 0, 255);}

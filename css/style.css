@@ -1,0 +1,332 @@
+body {
+  scroll-behavior: smooth;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  z-index: 999;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+
+:root {
+  --border-light: black;
+  --border-dark: white;
+  --text-light: black;
+  --text-dark: white;
+  --primary-color-light: #97abb4; /* Light mode primary color */
+  --primary-color-dark: #8e979c;  /* Dark mode primary color */
+}
+
+.custom-navbar {
+  background-color: #f8f9fa;  /* Light gray */
+  color: #000;
+}
+
+#contactButton {
+  padding: 12px 30px;
+  font-size: 16px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  opacity: 70%;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  background-color: var(--primary-color-light); /* Background color in light mode */
+  color: var(--text-light); /* Text color in light mode */
+  border: 2px solid var(--primary-color-light); /* Border color in light mode */
+  border-style: solid; /* Ensure border style is set */
+
+}
+
+
+/* Dark Mode Button Styles */
+body.dark-mode #contactButton {
+  background-color: var(--primary-color-dark); /* Background color in dark mode */
+  color: var(--text-dark); /* Text color in dark mode */
+  border-color: var(--primary-color-dark); /* Border color in dark mode */
+}
+
+/* Hover Effect */
+#contactButton:hover {
+  background-color: var(--primary-color-dark); /* Darker background on hover */
+  color: var(--text-light); /* Text color on hover */
+  border-color: var(--primary-color-dark);
+}
+
+#contactButton:focus {
+  outline: none;
+  box-shadow: 0 0 5px var(--primary-color-dark);
+}
+
+/* Apply border and text styles */
+.carousel-item .btn {
+  border-width: 2px;
+  border-style: solid;
+}
+
+.carousel-item .btn div {
+  color: var(--text-light); /* Default to light mode text color */
+}
+
+/* Default (Light Mode) */
+.carousel-control-icon {
+  color: #000000;  /* Dark text in light mode */
+}
+
+/* Dark Mode */
+body.dark-mode .carousel-control-icon {
+  color: #ffffff;  /* Light text in dark mode */
+}
+
+.carousel-control-icon {
+  transition: color 0.3s ease;
+}
+
+/* For light mode */
+@media (prefers-color-scheme: light) {
+  .carousel-item .btn {
+    border-color: var(--border-light);
+  }
+  .carousel-item .btn div {
+    color: var(--text-light);
+  }
+}
+
+/* For dark mode */
+@media (prefers-color-scheme: dark) {
+  .carousel-item .btn {
+    border-color: var(--border-dark);
+  }
+  .carousel-item .btn div {
+    color: var(--text-dark);
+  }
+}
+
+/* Dark mode styles via class */
+body.dark-mode .carousel-item .btn {
+  border-color: var(--border-dark);
+}
+
+body.dark-mode .carousel-item .btn div {
+  color: var(--text-dark);
+}
+
+/* Light mode styles via class */
+body:not(.dark-mode) .carousel-item .btn {
+  border-color: var(--border-light);
+}
+
+body:not(.dark-mode) .carousel-item .btn div {
+  color: var(--text-light);
+}
+
+.dark-mode .bg-light {
+  background-color: #1e1e1e !important;
+}
+
+.dark-mode .bg-white {
+  background-color: #1c1c1c !important;
+}
+
+.profile-img img {
+    margin: 15px auto;
+    display: block;
+    width: 120px;
+    border: 8px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  }
+
+  .home img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  /*hero*/
+
+  .hero {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    padding: 80px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+  
+  .hero:before {
+    content: "";
+    background: color-mix(in srgb, var(--background-color), transparent 70%);
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+  }
+  
+  .hero .container {
+    position: relative;
+    z-index: 3;
+  }
+  
+  .hero h2 {
+    margin: 0;
+    font-size: 64px;
+    font-weight: 700;
+  }
+  
+  .hero p {
+    margin: 5px 0 0 0;
+    font-size: 26px;
+  }
+  
+  .hero p span {
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--accent-color);
+  }
+  
+  .hero .social-links {
+    margin-top: 25px;
+  }
+  
+  .hero .social-links a {
+    font-size: 24px;
+    display: inline-block;
+    color: color-mix(in srgb, var(--default-color), transparent 50%);
+    line-height: 1;
+    margin-right: 20px;
+    transition: 0.3s;
+  }
+  
+  .hero .social-links a:hover {
+    color: var(--accent-color);
+  }
+  
+  @media (max-width: 768px) {
+    .hero h2 {
+      font-size: 32px;
+    }
+  
+    .hero p {
+      font-size: 20px;
+    }
+  }
+
+  /*end hero*/
+
+  /*about*/
+
+  .about .content h2 {
+    font-weight: 700;
+    font-size: 24px;
+  }
+  
+  .about .content ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .about .content ul li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .about .content ul strong {
+    margin-right: 10px;
+  }
+  
+  .about .content ul i {
+    font-size: 16px;
+    margin-right: 5px;
+    color: var(--accent-color);
+    line-height: 0;
+  }
+    /*end about*/
+
+/*project*/
+.project-view iframe {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .iframe-wrapper {
+    width: 100%;
+    max-height: 600px;
+    overflow: hidden;
+    margin-top: 10px;
+  }
+  
+  .responsive-iframe {
+    width: 100%;
+    height: 500px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+  }
+
+  button img {
+    max-height: 150px;
+    object-fit: cover;
+  }
+  
+  .modal-content {
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    filter: invert(0%) sepia(100%) saturate(7500%) hue-rotate(0deg);
+  }
+
+
+  .dark-mode input, .dark-mode textarea {
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /*footer*/
+  footer a {
+    margin: 0 10px;
+    font-size: 20px;
+    color: inherit;
+    transition: color 0.3s;
+  }
+  
+  footer a:hover {
+    color: var(--accent-color);
+  }
+
+  .dark-background {
+    --background-color: #040b14;
+    --default-color: #ffffff;
+    --heading-color: #ffffff;
+    --surface-color: #151f2b;
+    --contrast-color: #ffffff;
+  }
+  

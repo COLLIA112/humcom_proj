@@ -1,0 +1,11 @@
+
+    body {font-family: arial; font-size: 12; background-color: rgb(216, 234, 241);}
+    h2 {color: rgb(143, 41, 41);}
+    h3 {color: rgb(206, 85, 85);}
+    #u {text-decoration: underline;}
+    #i {font-style: italic;}
+    .title {text-decoration: underline;}
+    .goals {list-style-type: decimal; color: blueviolet;}
+    .l1 {list-style-type: decimal; color: rgb(84, 102, 4);}
+#circle {list-style-type: circle; color: rgb(80, 39, 46);}
+#square {list-style-type: square; color: rgb(167, 104, 10);}

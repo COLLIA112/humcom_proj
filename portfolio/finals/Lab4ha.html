@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Multiplication Table</title>
+</head>
+<body>
+    <h1>Multiplication Table</h1>
+    <button onclick="generateTable()">Generate Table</button>
+    <div id="result"></div>
+    <script>
+        function generateTable() {
+            let rows = prompt("Enter number of rows:");
+            let columns = prompt("Enter number of columns:");
+
+            rows = parseInt(rows);
+            columns = parseInt(columns);
+
+            let tableHTML = "<table border='1'>";
+            for (let i = 1; i <= rows; i++) {
+                tableHTML += "<tr>";
+                for (let j = 1; j <= columns; j++) {
+                    tableHTML += `<td>${i * j}</td>`;
+                }
+                tableHTML += "</tr>";
+            }
+            tableHTML += "</table>";
+
+            document.getElementById("result").innerHTML = tableHTML;
+        }
+    </script>
+</body>
+</html>

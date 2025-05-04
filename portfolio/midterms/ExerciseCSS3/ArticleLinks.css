@@ -1,0 +1,19 @@
+
+body {background-color: rgba(243, 207, 250, 0.877); font-family: tahoma; margin: 20px; text-align: justify;} 
+h1 {font-family: tahoma;}
+h4 {text-align: center;}
+#quote {font-style: italic;}
+
+
+
+a:link {text-decoration: underline; color: red;}
+
+/* it doesn't work sir */
+
+a:visited {text-decoration:line-through; color: yellow;}
+
+a:active {text-decoration: overline; color: green;}
+
+/*blink is already outdated so the only alternative i have is to use keyframes*/
+
+a:hover {text-decoration: blink; color: blue;}
